@@ -21,7 +21,7 @@ export default function CharacterList() {
 
   return (
     <div>
-      <SearchForm />
+      <SearchForm characters={characters}/>
     <section className="character-list">
       <Container>
         <Row>

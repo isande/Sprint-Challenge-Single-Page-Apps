@@ -1,6 +1,11 @@
 import React from "react";
 
-export default function WelcomePage() {
+export default function WelcomePage(props) {
+  
+  const routeToChars = () => {
+    props.history.push("/character-list");
+  }
+
   return (
     <section className="welcome-page">
       <header>
@@ -11,6 +16,7 @@ export default function WelcomePage() {
           alt="rick"
         />
       </header>
+      <button onClick={routeToChars} className="enter-button">Enter Site</button>
     </section>
   );
 }

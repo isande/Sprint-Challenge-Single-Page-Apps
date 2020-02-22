@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Container, Row } from "reactstrap";
 import CharacterCard from './CharacterCard';
+import SearchForm from './SearchForm';
 
 export default function CharacterList() {
   const [characters, setCharacters] = useState([]);
@@ -19,6 +20,8 @@ export default function CharacterList() {
   }, []);
 
   return (
+    <div>
+      <SearchForm />
     <section className="character-list">
       <Container>
         <Row>
@@ -28,5 +31,6 @@ export default function CharacterList() {
         </Row>
       </Container>
     </section>
+    </div>
   );
 }

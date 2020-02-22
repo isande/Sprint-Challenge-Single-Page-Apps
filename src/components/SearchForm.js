@@ -38,10 +38,12 @@ export default function SearchForm() {
           onChange={handleChange}
           value={searchTerm} />
       </form>
+      <br/>
       <Container>
+      <h4>Search results:</h4>
         <Row>
         {searchResults.map(char => (
-        <CharacterCard character={char}/>
+        <CharacterCard character={char} key={char.id}/>
       ))}
         </Row>
       </Container>

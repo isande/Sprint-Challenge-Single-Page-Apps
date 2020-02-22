@@ -21,9 +21,12 @@ export default function CharacterList() {
 
   return (
     <div>
-      <SearchForm characters={characters}/>
+      <SearchForm />
     <section className="character-list">
       <Container>
+      <br/>
+          <h4>All characters:</h4>
+          <br/>
         <Row>
       {characters.map(character => {
         return <CharacterCard character={character} key={character.id}/>;

@@ -42,3 +42,11 @@ main {
 header h1 {
   text-align: center;
 }
+
+.search-form {
+  text-align: center;
+}
+
+.character-list {
+  text-align: center;
+}

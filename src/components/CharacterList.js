@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Container, Row } from "reactstrap";
 import CharacterCard from './CharacterCard';
 
 export default function CharacterList() {
@@ -19,9 +20,13 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
+      <Container>
+        <Row>
       {characters.map(character => {
         return <CharacterCard character={character} key={character.id}/>;
       })}
+        </Row>
+      </Container>
     </section>
   );
 }
